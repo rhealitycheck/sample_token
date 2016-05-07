@@ -3,7 +3,7 @@ class SearchController < ApplicationController
         if params[:q].nil?
             @tasks = []
         else
-            @tasks = Task.search.params[:q]
+            @tasks = Task.search params[:q]
         end
     end
 end
